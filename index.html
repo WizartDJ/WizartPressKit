@@ -1,0 +1,1102 @@
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizart | Press Kit Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ff6b35;
+            --primary-dark: #e55a2b;
+            --secondary: #8b7355;
+            --accent: #ff8c42;
+            --bg: #0d0d0d;
+            --surface: #1a1410;
+            --surface-light: #251e18;
+            --text: #f5f0eb;
+            --text-muted: #a89f91;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Efeito de fumaça/partículas mágicas */
+        .magic-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0;
+            filter: blur(2px);
+            box-shadow: 0 0 10px var(--primary), 0 0 20px var(--accent);
+            animation: float-up 15s infinite;
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navegação */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+            filter: drop-shadow(0 0 15px rgba(255, 107, 53, 0.4));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 8rem 0 4rem;
+            background: 
+                radial-gradient(ellipse at center, rgba(255, 107, 53, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(139, 115, 85, 0.1) 0%, transparent 50%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff6b35' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .logo-container {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            filter: drop-shadow(0 0 40px rgba(255, 107, 53, 0.5));
+            animation: mystical-glow 4s ease-in-out infinite;
+        }
+
+        @keyframes mystical-glow {
+            0%, 100% { filter: drop-shadow(0 0 30px rgba(255, 107, 53, 0.4)) drop-shadow(0 0 60px rgba(255, 140, 66, 0.2)); }
+            50% { filter: drop-shadow(0 0 50px rgba(255, 107, 53, 0.7)) drop-shadow(0 0 100px rgba(255, 140, 66, 0.4)); }
+        }
+
+        .genre-main {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+            animation: fade-in-up 1s ease;
+        }
+
+        .genre-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.4em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            animation: fade-in-up 1s ease 0.2s both;
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-image {
+            margin-top: 2rem;
+            max-width: 380px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 
+                0 30px 60px rgba(0,0,0,0.8),
+                0 0 40px rgba(255, 107, 53, 0.2);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fade-in-up 1s ease 0.4s both;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.03) translateY(-10px);
+            box-shadow: 
+                0 40px 80px rgba(0,0,0,0.9),
+                0 0 60px rgba(255, 107, 53, 0.3);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .scroll-indicator:hover {
+            opacity: 1;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        /* Seções */
+        section {
+            padding: 7rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            color: var(--text);
+            letter-spacing: 0.1em;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        /* Bio Section */
+        .bio-section {
+            background: linear-gradient(180deg, transparent 0%, rgba(255, 107, 53, 0.03) 50%, transparent 100%);
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .bio-image {
+            position: relative;
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bio-image.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .bio-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            transition: all 0.5s ease;
+        }
+
+        .bio-image::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 1px solid var(--primary);
+            border-radius: 20px;
+            opacity: 0.2;
+            z-index: -1;
+            transition: all 0.5s ease;
+        }
+
+        .bio-image:hover::before {
+            top: 15px;
+            left: 15px;
+            right: -15px;
+            bottom: -15px;
+            opacity: 0.4;
+        }
+
+        .bio-content {
+            font-size: 1.05rem;
+            line-height: 2;
+            color: var(--text-muted);
+            transform: translateX(50px);
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bio-content.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .bio-content p {
+            margin-bottom: 1.8rem;
+        }
+
+        .quote {
+            font-style: italic;
+            border-left: 2px solid var(--primary);
+            padding-left: 1.8rem;
+            margin: 2.5rem 0;
+            color: var(--text);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '"';
+            position: absolute;
+            left: -10px;
+            top: -20px;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.3;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Galeria Section */
+        .gallery-section {
+            background: var(--surface);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            aspect-ratio: 3/4;
+            background: var(--surface-light);
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: grayscale(20%);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(13,13,13,0.95) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            color: var(--primary);
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13,13,13,0.98);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 0 80px rgba(255,107,53,0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox.active img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: var(--text);
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,107,53,0.1);
+            border: 1px solid rgba(255,107,53,0.2);
+        }
+
+        .lightbox-close:hover {
+            color: var(--primary);
+            background: rgba(255,107,53,0.2);
+            transform: rotate(90deg);
+        }
+
+        /* Links Section */
+        .links-section {
+            background: linear-gradient(180deg, transparent 0%, rgba(255, 107, 53, 0.03) 100%);
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .link-card {
+            background: var(--surface);
+            border: 1px solid rgba(255,107,53,0.1);
+            border-radius: 20px;
+            padding: 3.5rem 2rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        .link-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,107,53,0.1), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .link-card:hover::before {
+            left: 100%;
+        }
+
+        .link-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 107, 53, 0.4);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(255, 107, 53, 0.15);
+        }
+
+        .link-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.4s ease;
+            filter: grayscale(100%);
+            opacity: 0.8;
+        }
+
+        .link-card:hover .link-icon {
+            transform: scale(1.15) rotate(5deg);
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .link-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 0.1em;
+        }
+
+        .link-url {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 0.05em;
+        }
+
+        /* Aviso de Mídia */
+        .media-notice {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(255,107,53,0.05) 50%, transparent 100%);
+        }
+
+        .notice-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            border: 1px solid rgba(255,107,53,0.2);
+            border-radius: 15px;
+            background: rgba(26, 20, 16, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .notice-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+
+        .notice-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .notice-text {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .notice-text strong {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Contato Section */
+        .contact-section {
+            text-align: center;
+            background: 
+                radial-gradient(ellipse at center, rgba(255,107,53,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(139,115,85,0.05) 0%, transparent 50%);
+            padding-bottom: 5rem;
+        }
+
+        .contact-box {
+            background: var(--surface);
+            border-radius: 25px;
+            padding: 4rem;
+            margin-top: 3rem;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            position: relative;
+            overflow: hidden;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            transform: scale(0.95);
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-box.visible {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .contact-box::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 60%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-label {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .location {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .phone-number {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+
+        .phone-number:hover {
+            color: var(--primary);
+            text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 0;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255,107,53,0.1);
+            background: var(--bg);
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            height: 25px;
+            margin-bottom: 1.5rem;
+            opacity: 0.5;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+
+        .footer-logo:hover {
+            opacity: 0.8;
+            filter: grayscale(0%);
+        }
+
+        /* Responsividade */
+        @media (max-width: 968px) {
+            .bio-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .bio-image, .bio-content {
+                transform: translateY(30px);
+            }
+
+            .bio-image.visible, .bio-content.visible {
+                transform: translateY(0);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .genre-main {
+                font-size: 1.3rem;
+            }
+
+            .genre-sub {
+                font-size: 0.8rem;
+            }
+
+            .phone-number {
+                font-size: 1.5rem;
+            }
+
+            .contact-box {
+                padding: 2.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                max-width: 280px;
+            }
+
+            .notice-box {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Parallax effect */
+        .parallax {
+            will-change: transform;
+        }
+    </style>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body style="overflow: auto;">
+    <!-- Partículas mágicas -->
+    <div class="magic-particles" id="particles"><div class="particle" style="left: 58.8567%; animation-delay: 12.1936s; animation-duration: 19.6356s; width: 5.48776px; height: 5.48776px;"></div><div class="particle" style="left: 42.0491%; animation-delay: 7.23335s; animation-duration: 15.1051s; width: 2.93706px; height: 2.93706px;"></div><div class="particle" style="left: 96.4957%; animation-delay: 11.5398s; animation-duration: 13.5299s; width: 3.99018px; height: 3.99018px;"></div><div class="particle" style="left: 82.4709%; animation-delay: 4.31139s; animation-duration: 16.4305s; width: 3.17237px; height: 3.17237px;"></div><div class="particle" style="left: 31.562%; animation-delay: 14.7476s; animation-duration: 18.8819s; width: 5.34714px; height: 5.34714px;"></div><div class="particle" style="left: 43.3403%; animation-delay: 0.633269s; animation-duration: 13.5062s; width: 5.68869px; height: 5.68869px;"></div><div class="particle" style="left: 26.0164%; animation-delay: 13.3607s; animation-duration: 15.7352s; width: 5.63692px; height: 5.63692px;"></div><div class="particle" style="left: 54.7435%; animation-delay: 10.1438s; animation-duration: 13.1198s; width: 3.9726px; height: 3.9726px;"></div><div class="particle" style="left: 20.9448%; animation-delay: 7.87733s; animation-duration: 15.0298s; width: 4.70195px; height: 4.70195px;"></div><div class="particle" style="left: 13.6943%; animation-delay: 8.76059s; animation-duration: 13.1981s; width: 2.25367px; height: 2.25367px;"></div><div class="particle" style="left: 36.7456%; animation-delay: 2.46111s; animation-duration: 10.5209s; width: 3.66479px; height: 3.66479px;"></div><div class="particle" style="left: 20.4144%; animation-delay: 2.12083s; animation-duration: 14.6773s; width: 3.35703px; height: 3.35703px;"></div><div class="particle" style="left: 83.8792%; animation-delay: 11.6952s; animation-duration: 17.5989s; width: 5.97103px; height: 5.97103px;"></div><div class="particle" style="left: 99.3997%; animation-delay: 4.85199s; animation-duration: 13.0124s; width: 2.86545px; height: 2.86545px;"></div><div class="particle" style="left: 60.7812%; animation-delay: 8.4342s; animation-duration: 19.1891s; width: 3.39137px; height: 3.39137px;"></div><div class="particle" style="left: 9.2759%; animation-delay: 1.65878s; animation-duration: 17.1414s; width: 4.98943px; height: 4.98943px;"></div><div class="particle" style="left: 99.1548%; animation-delay: 13.3969s; animation-duration: 10.7348s; width: 2.40109px; height: 2.40109px;"></div><div class="particle" style="left: 60.2643%; animation-delay: 13.7565s; animation-duration: 12.4119s; width: 2.7698px; height: 2.7698px;"></div><div class="particle" style="left: 34.7992%; animation-delay: 8.11822s; animation-duration: 19.1386s; width: 5.68621px; height: 5.68621px;"></div><div class="particle" style="left: 79.907%; animation-delay: 12.8697s; animation-duration: 15.1918s; width: 2.5977px; height: 2.5977px;"></div><div class="particle" style="left: 80.2809%; animation-delay: 1.96585s; animation-duration: 16.0366s; width: 5.22798px; height: 5.22798px;"></div><div class="particle" style="left: 84.3273%; animation-delay: 1.94779s; animation-duration: 12.5413s; width: 4.68168px; height: 4.68168px;"></div><div class="particle" style="left: 25.1493%; animation-delay: 0.496244s; animation-duration: 14.0781s; width: 3.70998px; height: 3.70998px;"></div><div class="particle" style="left: 51.7707%; animation-delay: 13.5603s; animation-duration: 17.7845s; width: 5.52032px; height: 5.52032px;"></div><div class="particle" style="left: 77.0689%; animation-delay: 6.78376s; animation-duration: 12.3706s; width: 5.17525px; height: 5.17525px;"></div><div class="particle" style="left: 41.6747%; animation-delay: 6.12361s; animation-duration: 16.5945s; width: 4.35626px; height: 4.35626px;"></div><div class="particle" style="left: 94.8074%; animation-delay: 13.9406s; animation-duration: 13.7118s; width: 3.82743px; height: 3.82743px;"></div><div class="particle" style="left: 9.34714%; animation-delay: 13.1301s; animation-duration: 18.1535s; width: 2.9859px; height: 2.9859px;"></div><div class="particle" style="left: 44.5606%; animation-delay: 6.59803s; animation-duration: 11.1136s; width: 4.36679px; height: 4.36679px;"></div><div class="particle" style="left: 32.1249%; animation-delay: 10.9228s; animation-duration: 12.8958s; width: 4.47347px; height: 4.47347px;"></div><div class="particle" style="left: 57.8479%; animation-delay: 11.0302s; animation-duration: 11.2746s; width: 5.1869px; height: 5.1869px;"></div><div class="particle" style="left: 93.1083%; animation-delay: 7.726s; animation-duration: 19.9135s; width: 4.07806px; height: 4.07806px;"></div><div class="particle" style="left: 87.5215%; animation-delay: 14.3852s; animation-duration: 18.7632s; width: 3.54051px; height: 3.54051px;"></div><div class="particle" style="left: 38.53%; animation-delay: 9.48038s; animation-duration: 13.408s; width: 3.27448px; height: 3.27448px;"></div><div class="particle" style="left: 2.64636%; animation-delay: 2.89944s; animation-duration: 15.6905s; width: 4.69909px; height: 4.69909px;"></div><div class="particle" style="left: 72.3118%; animation-delay: 12.0507s; animation-duration: 12.0455s; width: 2.81619px; height: 2.81619px;"></div><div class="particle" style="left: 21.4711%; animation-delay: 8.64121s; animation-duration: 17.2529s; width: 2.27205px; height: 2.27205px;"></div><div class="particle" style="left: 33.075%; animation-delay: 10.9691s; animation-duration: 17.3958s; width: 3.31467px; height: 3.31467px;"></div><div class="particle" style="left: 16.1522%; animation-delay: 7.0942s; animation-duration: 11.2648s; width: 5.71668px; height: 5.71668px;"></div><div class="particle" style="left: 40.387%; animation-delay: 7.77683s; animation-duration: 17.6497s; width: 5.66601px; height: 5.66601px;"></div><div class="particle" style="left: 81.9826%; animation-delay: 9.44624s; animation-duration: 12.4367s; width: 2.03828px; height: 2.03828px;"></div><div class="particle" style="left: 31.4147%; animation-delay: 12.2428s; animation-duration: 12.7715s; width: 3.34367px; height: 3.34367px;"></div><div class="particle" style="left: 28.9855%; animation-delay: 14.6504s; animation-duration: 11.3642s; width: 2.52411px; height: 2.52411px;"></div><div class="particle" style="left: 61.0854%; animation-delay: 8.96125s; animation-duration: 10.1691s; width: 4.44891px; height: 4.44891px;"></div><div class="particle" style="left: 9.19915%; animation-delay: 6.88014s; animation-duration: 14.5818s; width: 4.94553px; height: 4.94553px;"></div><div class="particle" style="left: 74.3123%; animation-delay: 11.0605s; animation-duration: 15.7394s; width: 2.58481px; height: 2.58481px;"></div><div class="particle" style="left: 10.8709%; animation-delay: 0.550048s; animation-duration: 12.0134s; width: 5.04791px; height: 5.04791px;"></div><div class="particle" style="left: 2.72008%; animation-delay: 5.59728s; animation-duration: 10.8097s; width: 5.62478px; height: 5.62478px;"></div><div class="particle" style="left: 6.72705%; animation-delay: 2.0583s; animation-duration: 16.3566s; width: 3.71855px; height: 3.71855px;"></div><div class="particle" style="left: 69.2166%; animation-delay: 12.791s; animation-duration: 15.1549s; width: 2.36308px; height: 2.36308px;"></div><div class="particle" style="left: 65.557%; animation-delay: 9.37097s; animation-duration: 18.0365s; width: 4.09459px; height: 4.09459px;"></div><div class="particle" style="left: 59.7037%; animation-delay: 2.70628s; animation-duration: 18.0025s; width: 3.51872px; height: 3.51872px;"></div><div class="particle" style="left: 23.3315%; animation-delay: 14.3676s; animation-duration: 11.57s; width: 5.24082px; height: 5.24082px;"></div><div class="particle" style="left: 27.2531%; animation-delay: 8.34468s; animation-duration: 13.3027s; width: 3.06193px; height: 3.06193px;"></div><div class="particle" style="left: 21.1548%; animation-delay: 3.03917s; animation-duration: 11.2781s; width: 5.77456px; height: 5.77456px;"></div><div class="particle" style="left: 52.7538%; animation-delay: 2.28853s; animation-duration: 19.1029s; width: 3.81647px; height: 3.81647px;"></div><div class="particle" style="left: 33.6881%; animation-delay: 12.8969s; animation-duration: 17.3348s; width: 3.7835px; height: 3.7835px;"></div><div class="particle" style="left: 15.5072%; animation-delay: 10.4562s; animation-duration: 19.4399s; width: 4.16667px; height: 4.16667px;"></div><div class="particle" style="left: 9.87961%; animation-delay: 4.81024s; animation-duration: 15.6519s; width: 5.57714px; height: 5.57714px;"></div><div class="particle" style="left: 11.7601%; animation-delay: 2.21606s; animation-duration: 15.8229s; width: 5.65971px; height: 5.65971px;"></div><div class="particle" style="left: 17.9624%; animation-delay: 7.36964s; animation-duration: 14.8077s; width: 5.54605px; height: 5.54605px;"></div><div class="particle" style="left: 80.8254%; animation-delay: 9.3181s; animation-duration: 16.1682s; width: 3.73529px; height: 3.73529px;"></div><div class="particle" style="left: 77.1683%; animation-delay: 12.9711s; animation-duration: 18.7861s; width: 5.4544px; height: 5.4544px;"></div><div class="particle" style="left: 81.4014%; animation-delay: 13.4025s; animation-duration: 12.0888s; width: 3.39491px; height: 3.39491px;"></div><div class="particle" style="left: 39.8183%; animation-delay: 3.98649s; animation-duration: 18.1198s; width: 3.69966px; height: 3.69966px;"></div><div class="particle" style="left: 30.1371%; animation-delay: 8.02285s; animation-duration: 15.4473s; width: 2.6327px; height: 2.6327px;"></div><div class="particle" style="left: 24.6467%; animation-delay: 8.18988s; animation-duration: 18.4549s; width: 3.9191px; height: 3.9191px;"></div><div class="particle" style="left: 10.5506%; animation-delay: 6.55304s; animation-duration: 14.4264s; width: 2.30805px; height: 2.30805px;"></div><div class="particle" style="left: 35.8412%; animation-delay: 9.85341s; animation-duration: 17.7003s; width: 4.73983px; height: 4.73983px;"></div><div class="particle" style="left: 18.0129%; animation-delay: 8.26326s; animation-duration: 11.2312s; width: 2.11948px; height: 2.11948px;"></div><div class="particle" style="left: 54.6658%; animation-delay: 13.853s; animation-duration: 19.7454s; width: 4.9299px; height: 4.9299px;"></div><div class="particle" style="left: 86.6923%; animation-delay: 1.45359s; animation-duration: 15.1385s; width: 4.0294px; height: 4.0294px;"></div><div class="particle" style="left: 5.18446%; animation-delay: 6.58191s; animation-duration: 11.5391s; width: 5.60987px; height: 5.60987px;"></div><div class="particle" style="left: 50.1137%; animation-delay: 11.3916s; animation-duration: 12.8128s; width: 4.7012px; height: 4.7012px;"></div><div class="particle" style="left: 47.1621%; animation-delay: 13.041s; animation-duration: 11.8071s; width: 5.64521px; height: 5.64521px;"></div><div class="particle" style="left: 63.8965%; animation-delay: 13.4634s; animation-duration: 11.9707s; width: 3.45461px; height: 3.45461px;"></div><div class="particle" style="left: 99.3622%; animation-delay: 13.716s; animation-duration: 17.3514s; width: 2.83294px; height: 2.83294px;"></div><div class="particle" style="left: 44.3941%; animation-delay: 10.2384s; animation-duration: 18.4754s; width: 4.38252px; height: 4.38252px;"></div><div class="particle" style="left: 91.8717%; animation-delay: 4.5902s; animation-duration: 12.5068s; width: 2.49166px; height: 2.49166px;"></div><div class="particle" style="left: 69.3224%; animation-delay: 8.06797s; animation-duration: 12.1227s; width: 4.76246px; height: 4.76246px;"></div><div class="particle" style="left: 35.872%; animation-delay: 0.353292s; animation-duration: 16.2224s; width: 3.36947px; height: 3.36947px;"></div><div class="particle" style="left: 87.6306%; animation-delay: 14.1399s; animation-duration: 19.2656s; width: 2.12939px; height: 2.12939px;"></div><div class="particle" style="left: 85.5213%; animation-delay: 14.7142s; animation-duration: 12.1694s; width: 5.62446px; height: 5.62446px;"></div><div class="particle" style="left: 26.9915%; animation-delay: 10.2109s; animation-duration: 14.2707s; width: 5.03998px; height: 5.03998px;"></div><div class="particle" style="left: 58.3828%; animation-delay: 10.8222s; animation-duration: 10.0104s; width: 3.97909px; height: 3.97909px;"></div><div class="particle" style="left: 16.1375%; animation-delay: 11.0542s; animation-duration: 14.7966s; width: 5.88943px; height: 5.88943px;"></div><div class="particle" style="left: 8.08557%; animation-delay: 3.0257s; animation-duration: 11.0166s; width: 2.23745px; height: 2.23745px;"></div><div class="particle" style="left: 63.2512%; animation-delay: 3.63403s; animation-duration: 10.7429s; width: 4.49852px; height: 4.49852px;"></div><div class="particle" style="left: 22.7958%; animation-delay: 7.2518s; animation-duration: 15.3359s; width: 3.98696px; height: 3.98696px;"></div><div class="particle" style="left: 78.6903%; animation-delay: 6.13536s; animation-duration: 18.0198s; width: 2.21461px; height: 2.21461px;"></div><div class="particle" style="left: 95.0638%; animation-delay: 14.6241s; animation-duration: 13.0349s; width: 5.82269px; height: 5.82269px;"></div><div class="particle" style="left: 99.2348%; animation-delay: 7.19067s; animation-duration: 14.5754s; width: 5.2292px; height: 5.2292px;"></div><div class="particle" style="left: 49.9811%; animation-delay: 2.90765s; animation-duration: 14.6499s; width: 5.37929px; height: 5.37929px;"></div><div class="particle" style="left: 3.3113%; animation-delay: 2.42593s; animation-duration: 12.6738s; width: 2.33586px; height: 2.33586px;"></div><div class="particle" style="left: 47.561%; animation-delay: 5.03184s; animation-duration: 10.6505s; width: 5.36769px; height: 5.36769px;"></div><div class="particle" style="left: 10.0378%; animation-delay: 6.1947s; animation-duration: 19.1297s; width: 5.20666px; height: 5.20666px;"></div><div class="particle" style="left: 37.3853%; animation-delay: 9.32342s; animation-duration: 15.1698s; width: 4.9612px; height: 4.9612px;"></div><div class="particle" style="left: 6.10934%; animation-delay: 12.9262s; animation-duration: 16.5829s; width: 5.36352px; height: 5.36352px;"></div><div class="particle" style="left: 17.5594%; animation-delay: 6.61754s; animation-duration: 13.0215s; width: 4.06854px; height: 4.06854px;"></div><div class="particle" style="left: 99.0297%; animation-delay: 10.0267s; animation-duration: 19.7716s; width: 4.62674px; height: 4.62674px;"></div><div class="particle" style="left: 32.7873%; animation-delay: 1.37969s; animation-duration: 13.7216s; width: 5.01853px; height: 5.01853px;"></div><div class="particle" style="left: 66.8255%; animation-delay: 4.1146s; animation-duration: 11.9291s; width: 3.48055px; height: 3.48055px;"></div><div class="particle" style="left: 30.2095%; animation-delay: 11.7718s; animation-duration: 10.1934s; width: 2.81776px; height: 2.81776px;"></div><div class="particle" style="left: 64.2821%; animation-delay: 8.39706s; animation-duration: 14.3058s; width: 3.50089px; height: 3.50089px;"></div><div class="particle" style="left: 32.6068%; animation-delay: 10.1341s; animation-duration: 13.497s; width: 4.77468px; height: 4.77468px;"></div><div class="particle" style="left: 25.7648%; animation-delay: 4.95469s; animation-duration: 12.3054s; width: 3.56855px; height: 3.56855px;"></div><div class="particle" style="left: 55.6898%; animation-delay: 6.22581s; animation-duration: 16.7553s; width: 2.38474px; height: 2.38474px;"></div><div class="particle" style="left: 55.9625%; animation-delay: 3.21206s; animation-duration: 18.5589s; width: 2.18962px; height: 2.18962px;"></div><div class="particle" style="left: 59.4327%; animation-delay: 11.6111s; animation-duration: 19.2153s; width: 4.55031px; height: 4.55031px;"></div><div class="particle" style="left: 84.62%; animation-delay: 8.29681s; animation-duration: 12.6334s; width: 5.91475px; height: 5.91475px;"></div><div class="particle" style="left: 37.3148%; animation-delay: 13.3244s; animation-duration: 12.8386s; width: 5.3962px; height: 5.3962px;"></div><div class="particle" style="left: 28.1376%; animation-delay: 1.20935s; animation-duration: 19.3215s; width: 2.97283px; height: 2.97283px;"></div><div class="particle" style="left: 64.2488%; animation-delay: 12.5641s; animation-duration: 14.3235s; width: 3.58764px; height: 3.58764px;"></div><div class="particle" style="left: 91.2862%; animation-delay: 11.1026s; animation-duration: 14.1011s; width: 2.14646px; height: 2.14646px;"></div><div class="particle" style="left: 51.0516%; animation-delay: 7.44268s; animation-duration: 13.4152s; width: 5.41181px; height: 5.41181px;"></div><div class="particle" style="left: 48.3233%; animation-delay: 1.64183s; animation-duration: 19.9354s; width: 2.12363px; height: 2.12363px;"></div><div class="particle" style="left: 74.1384%; animation-delay: 4.01909s; animation-duration: 16.5895s; width: 4.01431px; height: 4.01431px;"></div><div class="particle" style="left: 95.3082%; animation-delay: 13.6243s; animation-duration: 18.6982s; width: 2.57312px; height: 2.57312px;"></div><div class="particle" style="left: 69.2018%; animation-delay: 6.54146s; animation-duration: 15.4458s; width: 5.70384px; height: 5.70384px;"></div><div class="particle" style="left: 69.9816%; animation-delay: 8.96163s; animation-duration: 12.5199s; width: 5.62828px; height: 5.62828px;"></div></div>
+
+    <!-- Navegação -->
+    <nav style="padding: 1rem 0px; background: rgba(13, 13, 13, 0.98);">
+        <div class="container">
+            
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#fotos">Fotos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="logo-container">
+                <img src="WIZART LOGO.svg" alt="Wizart" class="logo">
+            </div>
+            <div class="genre-main">Minimal Deep Tech</div>
+            <div class="genre-sub">Deep Tech • House • Tech House</div>
+            
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('sobre').scrollIntoView({behavior: 'smooth'})">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="1.5">
+                <path d="M12 5v14M19 12l-7 7-7-7"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="bio-section" id="sobre">
+        <div class="container">
+            <h2 class="section-title scroll-reveal visible">Sobre</h2>
+            <div class="bio-grid">
+                <div class="bio-image scroll-reveal visible" style="">
+                    <img alt="Wizart" src="WIZART (3).png">
+                </div>
+                <div class="bio-content scroll-reveal visible">
+                    <p>
+                        Wizart é o projeto artístico de Thiago Machado de Souza, 
+                        DJ, produtor musical e multi-instrumentista de 19 anos.
+                    </p>
+                    <p>
+                        Wizart vem de uma bagagem muito expressa na música,
+                        musicalizado desde os 12 anos, Thiago, começou no violão e logo mergulhou
+                        em outros instrumentos como guitarra, percussôes, baixo, cavaquinho e pandeiro.
+                        Com uma base solida na música tradicional, encontrou na musica eletrônica 
+                        o espaço perfeito para se expressar com liberdade,
+                        técnica e felling.
+                    </p>
+                    <p>
+                       Seu som e estilo carregam a essência de quem vive a musica. Através
+                       do Minimal Deep Tech, Deep Tech, Tech house e do House, Wizart entende que a pista
+                       precisa dançar e viver um momento único, e com toda a sua curadoria profissional,
+                       é exatamente isso que ele entrega.
+                   
+                     <p>
+                        Com muita inspiração na cena européia Wizart trás esse som para as suas quebradas,
+                        lembrando o público que a música boa é aquela que te coloca pra mexer.
+                    </p>
+                    <div class="quote">
+                        "Onde o groove comanda nossos peitos e liberta nossos corações."
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria Section -->
+    <section class="gallery-section" id="fotos">
+        <div class="container">
+            <h2 class="section-title scroll-reveal visible">Galeria</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item scroll-reveal visible">
+                    <img src="WIZART (1).png" alt="Wizart">
+                    <div class="gallery-overlay">
+                        
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal visible">
+                    <img src="WIZART (2).png" alt="Wizart">
+                    <div class="gallery-overlay">
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="gallery-item scroll-reveal visible">
+                    <img src="WIZART (6).png" alt="Wizart">
+                    <div class="gallery-overlay">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Aviso de Mídia --><section class="media-notice">
+        <div class="container">
+            <div class="notice-box scroll-reveal visible">
+                <div class="notice-icon">📦</div>
+                <p class="notice-text">
+                    Para download do <strong>kit de mídia completo</strong>, 
+                    entre em contato diretamente.
+                </p>
+            </div>
+        </div>
+    </section></section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-close">×</div>
+        <img src="file_000000006a2c720e9d5dc9927b87ef75%20(1).jpg" alt="Foto em tamanho grande" id="lightbox-img">
+    </div>
+
+    <!-- Links Section -->
+    <section class="links-section">
+        <div class="container">
+            <h2 class="section-title scroll-reveal visible">Conecte-se</h2>
+            <div class="links-grid">
+                <a href="https://www.youtube.com/@dj.wizart" target="_blank" class="link-card scroll-reveal visible">
+                    <div class="link-icon">▶️</div>
+                    <div class="link-title">YouTube</div>
+                    <div class="link-url">DJ Sets</div>
+                </a>
+                
+                <a href="https://www.instagram.com/wizart.wav/" target="_blank" class="link-card scroll-reveal visible">
+                    <div class="link-icon">📷</div>
+                    <div class="link-title">Instagram</div>
+                    <div class="link-url">@wizart.wav</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    
+
+    <!-- Contato Section -->
+    <section class="contact-section" id="contato">
+        <div class="container">
+            <h2 class="section-title scroll-reveal visible">Contato</h2>
+            <div class="contact-box scroll-reveal visible">
+                <div class="contact-content">
+                    <p class="contact-label">Booking</p>
+                    <p class="location">Videira, SC - Brasil</p>
+                    <a href="tel:+554999127489" class="phone-number">+55 49 9912-7489</a>
+                    
+                    <a href="https://wa.me/554999127489" class="whatsapp-btn" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+                        </svg>
+                        Chamar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="WIZART LOGO.svg" alt="Wizart" class="footer-logo">
+            <p>© 2025 Wizart. Todos os direitos reservados.</p>
+            <p>Thiago Machado de Souza</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gerar partículas mágicas
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 40; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+            particle.style.width = (2 + Math.random() * 4) + 'px';
+            particle.style.height = particle.style.width;
+            particlesContainer.appendChild(particle);
+        }
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal, .gallery-item, .link-card, .contact-box').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Lightbox functions
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+              });
+
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.style.padding = '1rem 0';
+                nav.style.background = 'rgba(13, 13, 13, 0.98)';
+            } else {
+                nav.style.padding = '1.5rem 0';
+                nav.style.background = 'rgba(13, 13, 13, 0.95)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body></html>
